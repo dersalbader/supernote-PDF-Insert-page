@@ -1,52 +1,40 @@
-# InsertPage — Supernote plugin (scaffold)
+InsertPage — Supernote PDF Plugin
 
-Adds a blank page into the PDF you're reading, right after your current
-page, in one tap — without leaving the reader or touching a computer.
+Beta release
 
-## Honest status
+InsertPage is a Supernote plugin for simple PDF page editing directly on the device.
 
-This is a working scaffold, not a tested plugin. Two things are solid:
+It has been used and tested on a Supernote Manta running Chauvet 3.29.44 beta.
 
-- The manifest (`PluginConfig.json`) and permission format — matches a
-  real, published, working Supernote plugin (FrameClip).
-- The actual PDF page insertion logic (`App.tsx`), using `pdf-lib` —
-  this is standard and correct for inserting a blank page into a PDF.
+Features
+Insert a blank page into a PDF
+Delete the current page
+Undo the last page insert or delete action
+Select another PDF using the built-in PDF file picker and insert a page from it
+Beta status
 
-One thing is **not yet verified** — marked with `TODO` in
-`InsertPageNativeModule.java`:
+This is currently a beta release.
 
-- How to ask the Supernote reader "which PDF and page am I on right
-  now", and how to tell it "reload this file and jump to page N".
-  FrameClip's plugin does this successfully, so the real API call
-  exists in the SDK — I just haven't seen FrameClip's own native
-  module source to copy the exact method names.
+The plugin is working and has been tested on the Supernote Manta with Chauvet 3.29.44 beta firmware, but behaviour may vary with other Supernote devices or firmware versions.
 
-## What to do with this
+Please note
 
-1. Set up the toolchain (Node + Android Studio — done).
-2. Clone FrameClip's repo alongside this one:
-   `git clone https://github.com/taoist22/sn-frameclip`
-3. Open
-   `sn-frameclip/android/app/src/main/java/com/snframeclip/FrameClipNativeModule.java`
-   and find the method(s) it uses to get the current document path and
-   page index. Copy that pattern into the two TODO methods in
-   `InsertPageNativeModule.java` here.
-4. Run:
-   ```
-   npm install
-   ./buildPlugin.sh
-   ```
-5. Copy `build/outputs/InsertPage.snplg` onto your Supernote (USB, or
-   however you moved files before) and install it via
-   Settings → Apps → Plugins → Add Plugin.
-6. Test on a throwaway PDF copy first, not an original you care about,
-   in case the write-back step needs adjusting.
+Some commands may occasionally need to be tapped twice if there is no response the first time. This appears to be related to the underlying Supernote/Ratta software rather than the plugin itself.
 
-## If step 3 doesn't turn up a clean match
+When the “Working…” dialog appears, the command has been accepted and is processing.
 
-Fall back plan: instead of editing the open PDF live, have the plugin
-save the new (page-inserted) PDF as a copy next to the original, then
-show a message telling you to reopen that copy. Slightly less seamless
-than "insert and stay in place", but removes the live-reload unknown
-entirely. Happy to build that version instead if the live-reload
-approach turns out not to be exposed to plugins.
+Please allow around 8 seconds for operations such as inserting or deleting a page to complete. Do not repeatedly tap the command while the Working dialog is displayed.
+
+As this is beta software, it is sensible to test it with a copy of an important PDF before using it on the original file.
+
+Installation
+
+Download the .snplg file from this repository and install it using the Supernote plugin installation system.
+
+Current plugin file:
+
+sn-insertpage-fixed.snplg
+
+Feedback
+
+Testing and feedback are very welcome, particularly from users trying the plugin on other Supernote models or firmware versions.
