@@ -1,0 +1,12 @@
+node_modules/
+build/
+android/app/build/
+android/build/
+android/.gradle/
+android/local.properties
+*.apk
+*.snplg
+*.zip
+.vscode/
+.idea/android/app/*.keystore
+.idea/

@@ -1,0 +1,14 @@
+{
+  "name": "InsertPage",
+  "desc": "Insert a blank page into the PDF right after the page you're currently reading, so you can write notes without losing your place.",
+  "iconPath": "assets/icon.png",
+  "versionName": "0.1.0-beta",
+  "versionCode": "1",
+  "pluginID": "inspg7k3m9qw2vtz",
+  "pluginKey": "InsertPage",
+  "jsMainPath": "index",
+  "uses-permissions": [
+    "plugin.permission.FILE:READ",
+    "plugin.permission.FILE:WRITE"
+  ]
+}

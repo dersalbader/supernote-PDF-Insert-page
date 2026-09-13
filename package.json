@@ -1,0 +1,26 @@
+{
+  "name": "sn-insertpage",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "./buildPlugin.sh"
+  },
+  "dependencies": {
+    "react": "19.0.0",
+    "react-native": "0.79.2",
+    "pdf-lib": "^1.17.1",
+    "sn-plugin-lib": "^0.1.65"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.3",
+    "@babel/runtime": "^7.25.0",
+    "@react-native/babel-preset": "0.79.2",
+    "@react-native/metro-config": "0.79.2",
+    "@react-native-community/cli": "18.0.0",
+    "@react-native-community/cli-platform-android": "18.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
