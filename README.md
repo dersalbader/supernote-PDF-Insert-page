@@ -2,7 +2,7 @@
 
 **Current beta: v0.2.5**
 
-InsertPage is a Supernote plugin for editing PDF pages directly on the device. It has been tested on a Supernote Manta running Chauvet 3.29.44 beta.
+InsertPage is a Supernote plugin for editing PDF pages directly on the device. It has been tested on a Supernote Manta running Chauvet 3.29.45 beta.
 
 ## Improvements in v0.2.5
 
